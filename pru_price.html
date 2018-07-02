@@ -1,0 +1,101 @@
+<form class="form-horizontal" role="form">
+                              <div class="form-group">
+              <label for="inputdwname" class="col-lg-2 control-label">
+                <i style="color: red;position: relative;right: 15px;">*</i>单位名称:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputdwname" placeholder="请输入单位名称"></div>
+            </div>
+            <div class="form-group">
+              <label for="inputdwaddr" class="col-lg-2 control-label">
+                <i style="color: red;position: relative;right: 15px;">*</i>单位地址:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputdwaddr" placeholder="请输入单位地址"></div>
+            </div>
+            <div class="form-group">
+              <label for="inputp" class="col-lg-2 control-label">
+                <i style="color: red;position: relative;right: 15px;">*</i>单位规模:</label>
+              <div class="col-sm-10">
+                <div class="checkbox">
+                  <label for="qian">
+                    <input type="radio" checked="" name="gm" />1000人以上</label>
+                  <label for="fqian">
+                    <input type="radio" name="gm" />500人-1000人</label>
+                  <label for="yfb">
+                    <input type="radio" name="gm" />100人-500人</label>
+                  <label for="yi">
+                    <input type="radio" name="gm" />100人以下</label></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputp" class="col-lg-2 control-label">
+                <i style="color: red;position: relative;right: 15px;">*</i>用户角色:</label>
+              <div class="col-sm-10">
+                <label class="radio-inline">
+                  <input type="radio" checked="" name="role" />企业法人</label>
+                <label class="radio-inline">
+                  <input type="radio" name="role" />技术总监</label>
+                <label class="radio-inline">
+                  <input type="radio" name="role" />其它（自填）</label>
+                <div class="vspace"></div>
+                <input type="text" class="form-control" id="other" placeholder="请输入" /></div>
+            </div>
+            <div class="form-group">
+              <label for="inputp" class="col-lg-2 control-label">
+                <i style="color: red;position: relative;right: 15px;">*</i>联系人:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputp" placeholder="请输入单位地址"></div>
+            </div>
+            <div class="form-group">
+              <label for="inputtel" class="col-lg-2 control-label">
+                <i style="color: red;position: relative;right: 15px;">*</i>联系电话:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputtel" placeholder="请输入单位地址"></div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-3 control-label" style="position:relative;right:49px;width: auto;">
+                <i style="color: red;position: relative;right: 15px;">*</i>您希望提供哪些服务:</label>
+              <div class="col-lg-9" style="position: relative;right: 54px;">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <label for="pcnet" id="pcnet_label" >
+                          <input type="checkbox" id="pcnet" />计算机和网络</label></td>
+                      <td>
+                        <label for="pcnet" id="pcnet_label">
+                          <input type="checkbox" id="pcnet" />存储和容灾</label></td>
+                      <td>
+                        <label for="pcnet" id="pcnet_label" >
+                          <input type="checkbox" id="pcnet" />IDC/ISP</label></td>
+                      <td>
+                        <label for="pcnet" id="pcnet_label" >
+                          <input type="checkbox" id="pcnet" />安全</label></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="pcnet" id="pcnet_label">
+                          <input type="checkbox" id="pcnet" />运维</label></td>
+                      <td>
+                        <label for="pcnet" id="pcnet_label">
+                          <input type="checkbox" id="pcnet" />软件研发</label></td>
+                      <td>
+                        <label for="pcnet" id="pcnet_label">
+                          <input type="checkbox" id="pcnet" />其它</label></td>
+                    </tr>
+                    <tr>
+                      <td colspan="4">
+                        <textarea class="form-control" rows="3"></textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-3 col-sm-6">
+                <p>
+                  <button type="button" class="btn btn-primary btn-lg">提交</button>
+                  <button type="button" class="btn btn-warning btn-lg">返回</button></p>
+              </div>
+            </div>
+         </form> 

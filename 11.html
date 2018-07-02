@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap 实例 - 一个简单的网页</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="bootstrap-v3.3.7/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="bootstrap-v3.3.7/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <style>.navbar-nav { float: none; text-align:center; } ul.nav.navbar-nav li { float:none; display: inline-block; margin: 0em; } .navbgc{ background: #1e2f3f ; /*color:#fff;*/ } .navbgc a{ color:#fff; font-weight: 600; } .row-marg-t{ margin-top: 6px;margin-bottom: 6px; } .nav-pills > li > a{ border-radius: 0px; font-weight: 600;color: #333;} .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover{ background-color: #1e2f3f; border: 0; } .btn_login{ border:1px solid #70747d;background-color:#1e2f3f;color: #fff;text-align: center;line-height: 16px; padding: 6px 12px;margin-top: 5px; } .btn_color{ background-color: #099fff; border: 0; } .vspace{ height: 15px; } #pcnet_label{ margin-right: 20px; } .noborder{ border: 0; } .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th{ border: 0; }
+              .sub1 {
+  background-color:#283f68;
+  height:80px;
+  width:auto;
+  color:#fff;
+  font-weight:600;
+  line-height:74px;
+}
+.sub1 .label_pad {
+  padding:15px 0 15px 0;
+}
+.sub2new {
+  background-color:#1a2d4e;
+  height:300px;
+  width:auto;
+}
+.sub3 {
+  background-color:#1e293b;
+  height:80px;
+  width:auto;
+  padding:20px 0;
+}
+.bqs {
+  font-size:14px !important;
+  color:#fff;
+  font-weight:600;
+  margin-bottom:0px !important;
+  line-height: 20px;
+}
+.bqs .ll {
+  margin-right:10px;
+}
+/*begin*/ #bgfooter {
+  margin:0 auto;
+  padding:0px;
+  width:100%;
+  height:210px;
+  background:#1e3253;
+  float:left;
+}
+#footer {
+  margin:0 auto;
+  padding:0px;
+  width:1127px;
+  height:210px;
+  overflow:hidden;
+}
+.copyright {
+  width:260px;
+  height:210px;
+  background:url(../images/line.jpg) no-repeat right top;
+  float:left
+}
+.copyright1 {
+  width:150px;
+  height:60px;
+  margin:20px 0 0 20px;
+  _margin:10px 0 0 10px;
+}
+.copyright2 {
+  /*width:220px;*/
+  height:auto;
+  margin:20px 0 0 40px;
+  _margin:20px 0 0 10px;
+  line-height:18px;
+  color:#ecece4;
+  font-size: 12px;
+  font-weight: bold;
+}
+.subnav {
+  width:800px;
+  height:190px;
+  margin:23px 0 0 44px;
+  _margin:12px 0 0 22px;
+  float:left;
+}
+.subnav2 {
+  width:180px;
+  height:190px;
+  float:left;
+}
+.subpl1{
+  padding-left: 50px;
+}
+.subpl2{
+  padding-left: 60px;
+}
+.subpl3{
+  padding-left: 67px;
+}
+.subpl4{
+  padding-left: 85px;
+}
+.subnav3 {
+  width:200px;
+  height:190px;
+  float:left;
+}
+.subnav4 {
+  width:200px;
+  height:190px;
+  float:left;
+}
+.subnav5 {
+  width:200px;
+  height:190px;
+  float:left;
+}
+.subnav strong {
+  /*font-weight:normal;*/
+  color:#ecece4;
+  height:30px;
+  font-size:16px;
+  width:auto;
+  display:block;
+}
+.subnav span {
+  font-weight:400;
+  color:#ccc;
+  height:20px;
+  font-size:14px;
+  width:auto;
+  display:block;
+  text-align: left;
+}
+.subnav strong a {
+  color:#fff;
+}
+.subnav span a {
+  color:#fff;
+}
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body,
+  .mycontent {
+    height: 100%;
+  }
+  
+  .mycontent {
+    height: auto;
+    min-height: 100%;
+    _height: 100%;
+    padding-top: 50px;
+  }
+  
+  .myfooter {
+    position: relative;
+    height: 80px;
+    /*line-height尽量不要超过height高度*/
+    line-height: 70px;
+    margin-top: 0px;
+    background: #333;
+    color: #fff;
+    /*font-size: 16px;*/
+    text-align: center;
+  }
+    .tb_laction{
+        position: relative;
+        float: right;
+        right: 10px;
+      }  
+  </style>
+</head>
+  
+  <body>
+    <div class="navbar-collapse collapse navbgc">
+      <div class="row row-marg-t">
+        <div class="col-md-2 col-md-offset-1">
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <img src="style/img/logo.jpg" width="180" style="text-align: center;" height="40" alt="众志电子"></li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="nav nav-pills">
+            <li class="active">
+              <a href="#">首页</a></li>
+            <li>
+              <a href="#">新闻动态</a></li>
+            <li>
+              <a href="#">产品服务</a></li>
+            <li>
+              <a href="#">解决方案</a></li>
+            <li>
+              <a href="#">帮助与支持</a></li>
+            <li>
+              <a href="#">关于我们</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <button type="button" class="btn_login">请登录</button>
+          <button type="button" class="btn_login btn_color">免费注册</button></div>
+      </div>
+    </div>
+    <div class="jumbotron text-center" style="margin-bottom:;padding: 0px;">
+      <img src="style/img/banner.jpg" class="img-responsive" alt="Cinque Terre">
+    </div>
+
+    <div class="container body-content mycontent">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="md_hd">
+            <h3>帮助与支持</h3>
+          </div>
+          <hr />
+          <ul class="nav nav-pills nav-stacked" id="mytab">
+            <li>
+              <a href="#zxkf">在线客服<span class="glyphicon glyphicon-chevron-down tb_laction"></span></a>
+            </li>
+            <li class="active">
+              <a href="#test" >申请测试<span class="glyphicon glyphicon-chevron-down tb_laction"></span></a>
+            </li>
+            <li>
+              <a href="#buy">注册与购买<span class="glyphicon glyphicon-chevron-down tb_laction"></span></a>
+            </li>
+          </ul>
+          <hr class="hidden-sm hidden-md hidden-lg">
+        </div>
+        <div class="col-sm-8">
+          <div class="tab_content" id="myTabContent">
+              <div style="display: none;"><h3>在线客服</h3><hr/></div>
+              <div style="display: block">
+                 <h3>申请测试</h3><hr />
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="inputdwname" class="col-sm-2 control-label">
+                <i style="color: red;position: relative;right: 15px;">*</i>单位名称:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputdwname" placeholder="请输入单位名称"></div>
+            </div>
+            <div class="form-group">
+              <label for="inputdwaddr" class="col-sm-2 control-label">
+                <i style="color: red;position: relative;right: 15px;">*</i>单位地址:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputdwaddr" placeholder="请输入单位地址"></div>
+            </div>
+            <div class="form-group">
+              <label for="inputp" class="col-sm-2 control-label">
+                <i style="color: red;position: relative;right: 15px;">*</i>单位规模:</label>
+              <div class="col-sm-10">
+                <div class="checkbox">
+                  <label for="qian">
+                    <input type="radio" checked="" name="gm" />1000人以上</label>
+                  <label for="fqian">
+                    <input type="radio" name="gm" />500人-1000人</label>
+                  <label for="yfb">
+                    <input type="radio" name="gm" />100人-500人</label>
+                  <label for="yi">
+                    <input type="radio" name="gm" />100人以下</label></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputp" class="col-sm-2 control-label">
+                <i style="color: red;position: relative;right: 15px;">*</i>用户角色:</label>
+              <div class="col-sm-10">
+                <label class="radio-inline">
+                  <input type="radio" checked="" name="role" />企业法人</label>
+                <label class="radio-inline">
+                  <input type="radio" name="role" />技术总监</label>
+                <label class="radio-inline">
+                  <input type="radio" name="role" />其它（自填）</label>
+                <div class="vspace"></div>
+                <input type="text" class="form-control" id="other" placeholder="请输入" /></div>
+            </div>
+            <div class="form-group">
+              <label for="inputp" class="col-sm-2 control-label">
+                <i style="color: red;position: relative;right: 15px;">*</i>联系人:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputp" placeholder="请输入单位地址"></div>
+            </div>
+            <div class="form-group">
+              <label for="inputtel" class="col-sm-2 control-label">
+                <i style="color: red;position: relative;right: 15px;">*</i>联系电话:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputtel" placeholder="请输入单位地址"></div>
+            </div>
+            <div class="form-group">
+              <label for="inputtel" class="col-sm-4 control-label" style="position:relative;right:32px;width: auto;">
+                <i style="color: red;position: relative;right: 15px;">*</i>您希望提供哪些服务:</label>
+              <div class="col-sm-8" style="position: relative;left: -25px;">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <label for="pcnet" id="pcnet_label">
+                          <input type="checkbox" id="pcnet" />计算机和网络</label></td>
+                      <td>
+                        <label for="pcnet" id="pcnet_label">
+                          <input type="checkbox" id="pcnet" />存储和容灾</label></td>
+                      <td>
+                        <label for="pcnet" id="pcnet_label">
+                          <input type="checkbox" id="pcnet" />IDC/ISP</label></td>
+                      <td>
+                        <label for="pcnet" id="pcnet_label">
+                          <input type="checkbox" id="pcnet" />安全</label></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="pcnet" id="pcnet_label">
+                          <input type="checkbox" id="pcnet" />运维</label></td>
+                      <td>
+                        <label for="pcnet" id="pcnet_label">
+                          <input type="checkbox" id="pcnet" />软件研发</label></td>
+                      <td>
+                        <label for="pcnet" id="pcnet_label">
+                          <input type="checkbox" id="pcnet" />其它</label></td>
+                    </tr>
+                    <tr>
+                      <td colspan="4">
+                        <textarea class="form-control" rows="3"></textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-3 col-sm-6">
+                <p>
+                  <button type="button" class="btn btn-primary btn-lg">提交</button>
+                  <button type="button" class="btn btn-warning btn-lg">返回</button></p>
+              </div>
+            </div>
+          </form>
+              </div>
+              <div style="display: none;"><h3>购买</h3><hr/></div>
+          </div>
+        </div>
+      </div>
+      <script>
+   $(function(){
+ $("#mytab  li").click(function(){
+  // console.log(11);
+ $(this).addClass("active").siblings().removeClass("active"); //切换选中的按钮高亮状态
+ $("#mytab li").find("span").each(function( index ) {
+      // console.log( index + ": " + $( this ).attr("class") );
+      $(this).attr("class","glyphicon glyphicon-chevron-down tb_laction");
+   });;
+ $(this).find("span").eq(0).attr("class","glyphicon glyphicon-chevron-up tb_laction");
+
+ var index=$(this).index(); //获取被按下按钮的索引值，需要注意index是从0开始的
+ $("#myTabContent > div").eq(index).show().siblings().hide(); //在按钮选中时在下面显示相应的内容，同时隐藏不需要的框架内容
+ });
+});
+</script>
+      <style type="text/css">
+
+      </style>
+    </div>
+    <div class="jumbotron text-center" style="margin-bottom:;padding: 0px;">
+      <div class="footer myfooter hidden-print">
+        <div class="sub1">
+          <div class="container">
+          <div class="row">
+                <div class="col-lg-3">
+              <label for="" id="service">
+                <img src="style/img/tel.png" alt="" width="40px" height="40px" style="position: relative;right: 5px;" />7x24小时售后服务</label>
+            </div>
+            <div class="col-lg-3">
+              <label for="">
+              <img src="style/img/wen.png" alt="" width="40px" height="40px" style="position: relative;right: 5px;" />安全稳定，高效进行</label>
+            </div>
+            <div class="col-lg-3">
+              <label for=""><img src="style/img/zhun.png" alt="" width="40px" height="40px" style="position: relative;right: 5px;" />提前预警，精准定位</label>
+           </div>
+            <div class="col-lg-3">
+              <label for=""><img src="style/img/bei.png" alt="" width="40px" height="40px" style="position: relative;right: 5px;" />0元备案服务</label>
+            </div>
+          </div>
+          </div>
+          </div>
+        
+        <div class="sub2new">
+            <div id="footer">
+              <div class="copyright">
+                <div class="copyright1">
+                  <a href="" title="">
+                    <img src="style/img/yunjisuan.png" alt="" alt="" /></a>
+                </div>
+                <div class="copyright2">
+                      <table style="border-collapse:separate; border-spacing:10px;">
+                          <tr style="margin-bottom: 5px;">
+                            <td style="text-align: right;">Add:</td>
+                            <td style="text-align: left;">泰安高新区配天门大街1110号</td>
+                          </tr>
+                          <tr style="margin-bottom: 5px;">
+                            <td style="text-align: right;"></td>
+                            <td style="text-align: left;">泰山科技创业城A区1号</td>
+                          </tr>
+                          <tr style="margin-bottom: 5px;">
+                            <td style="text-align: right;">tel:</td>
+                            <td style="text-align: left;">0538-6263779(7*24h)</td>
+                          </tr>
+                        </table>  
+                </div>
+              </div>
+              <div class="subnav">
+                
+                <div class="subnav2">
+                  <strong>
+                    <a href="" title="产品与服务" target="_blank">产品与服务</a></strong>
+                  <span class="subpl1">
+                    <a href="" title="弹性云服务器" target="_blank">弹性云服务器</a></span>
+                  <span class="subpl1">
+                    <a href="" title="服务器托管" target="_blank">服务器托管</a></span>
+                  <span class="subpl1">
+                    <a href="" title="云虚拟主机" target="_blank">云虚拟主机</a></span>
+                  <span class="subpl1">
+                    <a href="" title="云监控" target="_blank">云监控</a></span>
+                </div>
+                <div class="subnav3">
+                  <strong>
+                    <a href="" title="帮助与支持" target="_blank">帮助与支持</a></strong>
+                  <span class="subpl2">
+                    <a href="" title="注册与购买" target="_blank">注册与购买</a></span>
+                  <span class="subpl2">
+                    <a href="" title="备案问题" target="_blank">备案问题</a></span>
+                  <span class="subpl2">
+                    <a href="" title="虚拟主机问题" target="_blank">虚拟主机问题</a></span>
+                  <span class="subpl2">
+                    <a href="" title="云服务器问题" target="_blank">云服务器问题</a></span>
+                    <span class="subpl2">
+                    <a href="" title="服务器托管问题" target="_blank">服务器托管问题</a></span>
+                </div>
+                <div class="subnav4">
+                  <strong>
+                    <a href="" title="关于我们" target="_blank">关于我们</a></strong>
+                  <span class="subpl3">
+                    <a href="" title="公司简介" target="_blank">公司简介</a></span>
+                  <span class="subpl3">
+                    <a href="" title="联系我们" target="_blank">联系我们</a></span>
+                  <span class="subpl3">
+                    <a href="" title="发展历程" target="_blank">发展历程</a></span>
+                  <span class="subpl3">
+                    <a href="" title="加入我们" target="_blank">加入我们</a></span>
+                    <span class="subpl3">
+                    <a href="" title="合作资质" target="_blank">合作资质</a></span>
+                </div>
+                <div class="subnav5">
+                  <strong>
+                    <a href="" title="其他" target="_blank">其他</a></strong>
+                  <span class="subpl4">
+                    <a href="" title="服务中心" target="_blank">服务中心</a></span>
+                  <span class="subpl4"> 
+                    <a href="" title="产品价格" target="_blank">产品价格</a></span>
+                  <span class="subpl4">
+                    <a href="" title="数据中心" target="_blank">数据中心</a></span>
+                  <span class="subpl4">
+                    <a href="" title="服务协议" target="_blank">服务协议</a></span>
+                  <span class="subpl4">
+                    <a href="" title="意见反馈" target="_blank">意见反馈</a></span>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+        <div class="sub3">
+          <!-- 联系我们 -->
+          <div class="col-sm-offset-3 col-sm-6">
+            <p class="bqs">
+              <label class="ll">版权所有：泰安市云计算中心</label>
+              <label class="ll">咨询电话：0538-6263779</label></p>
+            <p class="bqs">
+              <label class="ll">鲁ICP备11000355-2号</label>
+              <label class="ll">鲁公安网备：37099202000005</label></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
